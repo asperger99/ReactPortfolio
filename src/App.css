@@ -2,56 +2,64 @@
   display: none;
 }
 .app {
+  /* background: rgb(140, 24, 58); */
+  background: rgb(140, 24, 58);
+  max-width: 100%;
   min-width: 100%;
-  height: 100vh;
 }
+
 .app__container {
-  padding-top: 19vh;
-  min-width: 100%;
+  /* padding-top: 19vh; */
+  width: 100%;
+  /* background: rgb(140, 24, 58); */
 }
-/* .app__container {
-  min-height: 81vh;
-} */
+
 .app::-webkit-scrollbar {
   display: none;
 }
 .app__container__landingPage {
-  background: rgb(140, 24, 58);
+  /* background: rgb(140, 24, 58);
   background: linear-gradient(
     0deg,
     rgba(140, 24, 58, 1) 25%,
     rgba(0, 0, 0, 1) 100%
+  ); */
+
+  background-color: #000000;
+  background-image: linear-gradient(
+    0deg,
+    #000000 0%,
+    #8c183a 50%,
+    #000000 100%
   );
-  height: 81vh;
+
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 .app__container__about {
-  width: 100%;
+  max-width: 100%;
   height: 81vh;
   background-color: black;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  padding: 50px 0;
+  padding-top: 10rem;
 }
 .app__container__skills {
   width: 100%;
-  height: 81vh;
-  background: rgb(140, 24, 58);
-  background: linear-gradient(
-    0deg,
-    rgba(140, 24, 58, 1) 25%,
-    rgba(0, 0, 0, 1) 100%
-  );
-  padding-bottom: 50px;
-}
-.app__container__projects {
-  width: 100%;
-  height: 81vh;
+  min-height: 85vh;
+  padding-top: 16px;
   background-color: black;
-  display: grid;
-  place-items: center;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
 }
+
 .app__container__about__img {
   height: 200px;
   width: 200px;
@@ -73,14 +81,20 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
 }
-.app__container__about__info > p {
-  color: white;
+.app__container__about__info > h3 {
+  margin-top: 16px;
 }
+
 .app__container__projects {
   width: 100%;
-  height: 81vh;
+  min-height: 81vh;
+  padding-top: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
   background: rgb(140, 24, 58);
   background: linear-gradient(
     0deg,
@@ -101,4 +115,231 @@
   justify-content: space-around;
   align-items: center;
   width: 70%;
+}
+.app__container__footer {
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 8px;
+  margin-top: 100px;
+  height: 80px;
+  padding: 8px 16px;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-top-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.footer__icon {
+  color: rgb(140, 24, 58);
+  font-size: 4rem !important;
+  transition: 0.5s !important;
+  border-radius: 10px;
+}
+.footer__icon:hover {
+  cursor: pointer;
+  color: #1ae285;
+  box-shadow: 0 0 5px#1ae285;
+  text-shadow: 0 0 5px #1ae285;
+}
+
+/* //////name animation////////// */
+
+.container {
+  width: 100%;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .box {
+  width: 250px;
+  height: 250px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.container .box .title {
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 50px;
+}
+.container .box .title .block {
+  width: 0%;
+  height: inherit;
+  background: rgba(7, 238, 161, 0);
+  position: absolute;
+  animation: mainBlock 2s cubic-bezier(0.74, 0.06, 0.4, 0.92) forwards;
+  display: flex;
+}
+.container .box .title h1 {
+  font-family: "Poppins";
+  color: #fff;
+  font-size: 40px;
+  -webkit-animation: mainFadeIn 2s forwards;
+  -o-animation: mainFadeIn 2s forwards;
+  animation: mainFadeIn 2s forwards;
+  animation-delay: 0.3s;
+  opacity: 0;
+  display: flex;
+  align-items: baseline;
+  position: relative;
+}
+.container .box .title h1 span {
+  width: 0px;
+  height: 0px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  background: #ffbcbc;
+  -webkit-animation: load 0.6s cubic-bezier(0.74, 0.06, 0.4, 0.92) forwards;
+  animation: popIn 0.8s cubic-bezier(0.74, 0.06, 0.4, 0.92) forwards;
+  animation-delay: 2s;
+  margin-left: 5px;
+  margin-top: -10px;
+  position: absolute;
+  bottom: 13px;
+  right: -12px;
+}
+.container .box .role {
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 30px;
+  margin-top: -10px;
+}
+.container .box .role .block {
+  width: 0%;
+  height: inherit;
+  background: #ffffff;
+  position: absolute;
+  animation: secBlock 2s cubic-bezier(0.74, 0.06, 0.4, 0.92) forwards;
+  animation-delay: 0.5s;
+  display: flex;
+}
+.container .box .role p {
+  animation: secFadeIn 1s forwards;
+  animation-delay: 1s;
+  opacity: 0;
+  font-weight: 400;
+  font-family: "Lato";
+  color: #ffffff;
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+
+@keyframes mainBlock {
+  0% {
+    width: 0%;
+    left: 0;
+  }
+  50% {
+    width: 100%;
+    left: 0;
+  }
+  100% {
+    width: 0;
+    left: 100%;
+  }
+}
+@keyframes secBlock {
+  0% {
+    width: 0%;
+    left: 0;
+  }
+  50% {
+    width: 100%;
+    left: 0;
+  }
+  100% {
+    width: 0;
+    left: 100%;
+  }
+}
+@keyframes mainFadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes popIn {
+  0% {
+    width: 0px;
+    height: 0px;
+    background: #e9d856;
+    border: 0px solid #ddd;
+    opacity: 0;
+  }
+  50% {
+    width: 10px;
+    height: 10px;
+    background: #e9d856;
+    opacity: 1;
+    bottom: 45px;
+  }
+  65% {
+    width: 7px;
+    height: 7px;
+    bottom: 0px;
+    width: 15px;
+  }
+  80% {
+    width: 10px;
+    height: 10px;
+    bottom: 20px;
+  }
+  100% {
+    width: 7px;
+    height: 7px;
+    background: #e9d856;
+    border: 0px solid #222;
+    bottom: 13px;
+  }
+}
+@keyframes secFadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes top {
+  0% {
+    opacity: 0;
+    bottom: -80px;
+  }
+  100% {
+    opacity: 1;
+    bottom: 0px;
+  }
+}
+@keyframes icon {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.3) rotate(-2deg);
+  }
+  100% {
+    opacity: 1;
+    bottom: 0px;
+  }
+}
+
+@media (max-width: 1048px) {
+  .footer__icon {
+    font-size: 2.4rem !important;
+  }
 }

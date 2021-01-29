@@ -14,6 +14,15 @@
   align-items: center;
 }
 .skills__chart {
-  width: 100%;
-  margin: auto;
+  position: relative;
+  margin-top: 16px;
+  min-width: 50%;
+  max-width: 80%;
+  overflow-x: scroll;
+}
+
+@media (max-width: 1048px) {
+  .skills__chart {
+    min-width: 100%;
+  }
 }
